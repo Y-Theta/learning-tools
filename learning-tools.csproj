@@ -9,4 +9,15 @@
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <None Remove=".git" />
+	  <None Remove=".gitignore" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="tools\tree\" />
+	  <Folder Include="tools\heap\" />
+	  <Folder Include="models\" />
+	</ItemGroup>
+
 </Project>
