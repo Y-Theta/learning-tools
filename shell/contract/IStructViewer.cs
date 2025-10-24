@@ -13,5 +13,7 @@ namespace learning_tools.contract
         string DisplayName { get; }
 
         void Display(object datas);
+
+        UserControl Content { get; }
     }
 }
