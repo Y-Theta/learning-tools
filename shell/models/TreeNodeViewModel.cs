@@ -11,14 +11,26 @@ using System.Threading.Tasks;
 
 namespace learning_tools.models
 {
-    internal class TreeNodeViewModel : TreeNode<int>, IStructDisplayAdapter
+    internal class TreeNodeViewModel : TreeNode, IStructDisplayAdapter
     {
-        public TreeNodeViewModel(int node, TreeNode<int> left = null, TreeNode<int> right = null) : base(node, left, right)
+        public TreeNodeViewModel Parent { get; set; }
+
+        public int Layer { get; set; }
+
+        public int LeftWidth { get; set; }
+
+        public int RightWidth { get; set; }
+
+        public double XPos { get; set; }
+
+        public double YPos { get; set; }
+
+        public TreeNodeViewModel(object node, TreeNode left = null, TreeNode right = null) : base(node, left, right)
         {
         }
 
         #region   IStructDisplayAdapter
-        public string Content => base.Val.ToString();
+        public string Content => base.Val?.ToString();
 
         public
 #if NET48

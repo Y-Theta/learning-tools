@@ -22,4 +22,23 @@ namespace commonstruct
         public T Val { get; set; }
     }
 
+    public class TreeNode : TreeNode<object>
+    {
+        public TreeNode()
+        {
+        }
+
+        public TreeNode(object node, TreeNode left = null, TreeNode right = null) : base(node, left, right)
+        {
+        }
+
+        public static TreeNode ToTreeNode<T>(TreeNode<T> node)
+        {
+            if (node is null)
+                return null;
+
+            return new TreeNode { Val = node.Val, Left = ToTreeNode(node.Left), Right = ToTreeNode(node.Right) };
+        }
+    }
+
 }
