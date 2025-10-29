@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace learning_tools.models
+namespace learning_tools.tools.tree.models
 {
     internal class TreeNodeViewModel : TreeNode, IStructDisplayAdapter
     {

@@ -15,7 +15,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="tools\tree\" />
 	  <Folder Include="tools\heap\" />
 	</ItemGroup>
 

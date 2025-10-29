@@ -1,7 +1,7 @@
 ﻿using commonstruct;
 
 using learning_tools.contract;
-using learning_tools.models;
+using learning_tools.tools.tree.models;
 
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace learning_tools.views
+namespace learning_tools.tools.tree.views
 {
     /// <summary>
     /// UserControl1.xaml 的交互逻辑
@@ -29,11 +29,11 @@ namespace learning_tools.views
         #region   prop
         internal TreeNodeViewModel TreeRoot { get; private set; }
 
-        private int _baseHeight = 32;
+        private int _baseHeight = 24;
 
-        private int _baseWidth = 32;
+        private int _baseWidth = 24;
 
-        private int _baseOffset = 12;
+        private int _baseOffset = 8;
 
         private int _nodeSize = 16;
         #endregion
@@ -60,6 +60,7 @@ namespace learning_tools.views
         private void LoadTree(TreeNode root)
         {
             TreeRoot = root?.Select(t => new TreeNodeViewModel(t.Val, t.Left as TreeNode, t.Right as TreeNode)) as TreeNodeViewModel;
+            RenderTree();
         }
 
         private void LoadTree(TreeNode<int> root)
@@ -94,7 +95,6 @@ namespace learning_tools.views
             }
             TreeRoot = treeNodes[0];
             treeNodes.Clear();
-
             RenderTree();
         }
 
@@ -242,7 +242,7 @@ namespace learning_tools.views
             }
             else
             {
-
+                
             }
         }
         #endregion

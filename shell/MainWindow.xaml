@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:learning_tools"
-        xmlns:viewer="clr-namespace:learning_tools.views"
+        xmlns:viewer="clr-namespace:learning_tools.tools.tree.views"
         mc:Ignorable="d"
         Title="learning-tools" Height="640" Width="800">
     <Grid>
