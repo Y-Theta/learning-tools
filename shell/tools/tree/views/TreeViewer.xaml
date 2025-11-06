@@ -9,5 +9,12 @@
         <Viewbox Stretch="Uniform">
             <Canvas x:Name="PART_CANVAS" />
         </Viewbox>
+        <ListView>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
     </Grid>
 </UserControl>
